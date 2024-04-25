@@ -129,6 +129,10 @@ export const Concomitants = () => http.get('/business/Concomitants/list');
 export const Doctorlist = () => http.get('/business/Doctor/list');
 // 医生添加
 export const DoctorPost = (data) => http.post('/business/Doctor', data);
+// 医生更新
+export const DoctorPut = (data) => http.put('/business/Doctor', data);
+// 医生删除
+export const Doctordelete = (id) => http.delete(`/business/Doctor/${id}`);
 
 // 问卷调查表
 export const Surveyslist = () => http.get('/business/Surveys/list');
