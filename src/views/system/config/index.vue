@@ -25,36 +25,37 @@
           </div></el-button
         >
       </el-row>
-      <!-- 表格 -->
-      <!-- <el-table
-        ref="multipleTable"
-        :data="role"
-        tooltip-effect="dark"
-        style="width: 100%"
-        @selection-change="handleSelectionChange22"
-        border
-      >
-        <el-table-column type="selection" width="55"> </el-table-column>
-        <el-table-column prop="userId" label="ID" width="120"> </el-table-column>
-        <el-table-column prop="deptName" label="用户id" width="120"> </el-table-column>
-        <el-table-column prop="userName" label="提交时间" width="120"> </el-table-column>
-        <el-table-column prop="email" label="提交内容" width="120"> </el-table-column>
-         <el-table-column prop="name" label="操作" sortable width="200">
-          <template v-slot="scope">
-            <el-button type="text">
-              <div class="flex" @click="showmbxg(scope.row.id)">
-                <Icon icon="solar:pen-2-bold" /><span>详情</span>
-              </div>
-            </el-button>
-            <el-button type="text">
-              <div class="flex" @click="deleteuserlit(scope.row.id)">
-                <Icon icon="pajamas:remove" /><span>删除</span>
-              </div>
-            </el-button>
-          </template>
-        </el-table-column>
-      </el-table> -->
     </div>
+    <!-- 表格 -->
+    <el-table
+      ref="multipleTable"
+      :data="role"
+      tooltip-effect="dark"
+      style="width: 100%"
+      @selection-change="handleSelectionChange22"
+      class="mt-4"
+      border
+    >
+      <el-table-column type="selection" width="55"> </el-table-column>
+      <el-table-column prop="userId" label="ID"> </el-table-column>
+      <el-table-column prop="deptName" label="用户id"> </el-table-column>
+      <el-table-column prop="userName" label="提交时间"> </el-table-column>
+      <el-table-column prop="email" label="提交内容"> </el-table-column>
+      <el-table-column prop="name" label="操作" width="180">
+        <template v-slot="scope">
+          <el-button type="text">
+            <div class="flex" @click="showmbxg(scope.row.id)">
+              <Icon icon="solar:pen-2-bold" /><span>详情</span>
+            </div>
+          </el-button>
+          <el-button type="text">
+            <div class="flex" @click="deleteuserlit(scope.row.id)">
+              <Icon icon="pajamas:remove" /><span>删除</span>
+            </div>
+          </el-button>
+        </template>
+      </el-table-column>
+    </el-table>
   </div>
 </template>
 <script>
