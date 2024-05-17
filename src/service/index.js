@@ -122,6 +122,7 @@ export const FeedbackDeleteID = (id) => http.delete(`/business/Feedback/${id}`);
 // 症状管理
 export const Symptomslist = () => http.get('/business/Symptoms/list');
 
+
 // 伴随症状列表
 export const Concomitants = () => http.get('/business/Concomitants/list');
 

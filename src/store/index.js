@@ -9,7 +9,7 @@ import createPersistedState from 'vuex-persistedstate';
 import { adminMenu } from '@/service';
 // import buidDynamicRoutes from '@/router/routes.dynamic';
 // import router from '@/router';
-
+// 注册两个全局组件
 Vue.use(Vuex);
 // 实例化store
 const store = new Vuex.Store({
@@ -52,5 +52,10 @@ const store = new Vuex.Store({
 // 异步修改数据：actions（走异步流程） + mutations
 // store.commit触发mutaions （mustaions函数中的第一个参数为state）
 // store.dispatch触发actions （actions函数中的第一个参数为store）
+
+/**
+ * 
+ */
+
 
 export default store;
